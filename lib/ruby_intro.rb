@@ -14,8 +14,9 @@ def max_2_sum(array)
   end
 end
 
-def sum_to_n? arr, n
-  # YOUR CODE HERE
+def sum_to_n?(arr, n)
+  permutationArray = arr.permutation(2).to_a
+  arr.any? && permutationArray.any? {|element| element.inject(:+) == n}
 end
 
 # Part 2
