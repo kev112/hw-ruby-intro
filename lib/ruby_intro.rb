@@ -2,12 +2,16 @@
 
 # Part 1
 
-def sum arr
-  # YOUR CODE HERE
+def sum(array)
+ array.inject(0){|sum,x| sum + x }
 end
 
-def max_2_sum arr
-  # YOUR CODE HERE
+def max_2_sum(array)
+  if array.length == 0 
+    0
+  else 
+    array.max(2).inject(:+)
+  end
 end
 
 def sum_to_n? arr, n
